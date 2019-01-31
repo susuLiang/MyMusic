@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AFNetworking.h>
+#import "MusicModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property NSMutableArray <Music*> *musicArray;
+- (IBAction)tapSearchButton:(UIButton *)sender;
+
 
 @end
 
